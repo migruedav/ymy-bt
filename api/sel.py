@@ -70,36 +70,36 @@ def sel():
         time.sleep(5)
         driver.quit()
 
-        # # random_time = random.randint(1, 10)
-        # random_time = 3
-        # print("time1", random_time)
-        # time.sleep(random_time)
-        # arts = driver.find_elements(by="css selector", value="a:has(img):has(h3)")
-        # cats = [
-        #     "Wellbeing & Health",
-        #     "Allure & Grooming",
-        #     "Taste",
-        #     "Style",
-        #     "Bon Voyage",
-        #     "Awareness",
-        #     "Gadgets",
-        #     "Furnishing",
-        # ]
-        # cat = driver.find_element(by="link text", value=random.choice(cats))
-        # print("cat", cat.text)
-        # cat.click()
-        # # random_time = random.randint(1, 10)
-        # random_time = 3
-        # print("time2", random_time)
-        # time.sleep(random_time)
-        # arts = driver.find_elements(by="css selector", value="a:has(img):has(h3)")
-        # art = random.choice(arts)
-        # art.click()
-        # # random_time = random.randint(1, 10)
-        # random_time = 3
-        # print("time3", random_time)
-        # time.sleep(random_time)
-        # driver.quit()
+        random_time = random.randint(1, 10)
+        random_time = 3
+        print("time1", random_time)
+        time.sleep(random_time)
+        arts = driver.find_elements(by="css selector", value="a:has(img):has(h3)")
+        cats = [
+            "Wellbeing & Health",
+            "Allure & Grooming",
+            "Taste",
+            "Style",
+            "Bon Voyage",
+            "Awareness",
+            "Gadgets",
+            "Furnishing",
+        ]
+        cat = driver.find_element(by="link text", value=random.choice(cats))
+        print("cat", cat.text)
+        cat.click()
+        # random_time = random.randint(1, 10)
+        random_time = 3
+        print("time2", random_time)
+        time.sleep(random_time)
+        arts = driver.find_elements(by="css selector", value="a:has(img):has(h3)")
+        art = random.choice(arts)
+        art.click()
+        # random_time = random.randint(1, 10)
+        random_time = 3
+        print("time3", random_time)
+        time.sleep(random_time)
+        driver.quit()
 
         return {"pais": pais, "message": "METDC"}
     except Exception as e:
