@@ -68,7 +68,6 @@ def sel():
         print("cat", cat.text)
         cat.click()
         time.sleep(5)
-        driver.quit()
 
         random_time = random.randint(1, 10)
         random_time = 3
