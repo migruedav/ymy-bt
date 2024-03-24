@@ -5,17 +5,21 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 def sel():
-    options = Options()
-    options.add_argument("--headless")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-gpu")
-    options.add_argument("--disable-dev-shm-usage")
-    options.binary_location = "/root/code/ymy-bt"
+    try:
+        options = Options()
+        options.add_argument("--headless")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-gpu")
+        options.add_argument("--disable-dev-shm-usage")
+        options.binary_location = "/usr/bin/google-chrome"
 
-    service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=options)
+        driver = webdriver.Chrome(
+            service=Service(ChromeDriverManager().install()), options=options
+        )
 
-    url = "https://redis.com/"
+        url = "https://redis.com/"
 
-    driver.get(url)
-    return driver.title
+        driver.get(url)
+        return driver.title
+    except Exception as e:
+        return str(e)
