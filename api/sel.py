@@ -11,10 +11,10 @@ def sel():
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-gpu")
         options.add_argument("--disable-dev-shm-usage")
-        options.binary_location = "/usr/bin/"
+        options.binary_location = "/usr/bin/google-chrome"
 
         driver = webdriver.Chrome(
-            service=Service(ChromeDriverManager().install()), options=options
+            service=Service("/root/code/ymy-bt/chromedriver"), options=options
         )
 
         url = "https://redis.com/"
