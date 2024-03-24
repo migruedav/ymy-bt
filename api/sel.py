@@ -1,6 +1,6 @@
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
-from selenium-wire import webdriver
+from seleniumwire import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 import random
 import time
@@ -43,7 +43,6 @@ def sel():
             "suppress_connection_errors": False,
         }
 
-        
         driver = webdriver.Chrome(
             service=Service(
                 ChromeDriverManager(driver_version="123.0.6312.58").install()
@@ -51,8 +50,6 @@ def sel():
             options=options,
             # seleniumwire_options=proxy_options,
         )
-
-
 
         driver.get("https://www.youmainlyyou.com/")
         time.sleep(5)
