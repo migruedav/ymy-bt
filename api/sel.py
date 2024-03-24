@@ -19,7 +19,7 @@ def sel():
             options=options,
         )
 
-        url = "https://redis.com/"
+        url = "https://www.youmainlyyou.com/"
 
         driver.get(url)
         return driver.title
