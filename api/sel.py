@@ -1,6 +1,6 @@
-from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
+from selenium-wire import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 import random
 import time
@@ -19,13 +19,6 @@ def sel():
             "profile.default_content_setting_values.css": 2,
         }
         options.add_experimental_option("prefs", prefs)
-
-        driver = webdriver.Chrome(
-            service=Service(
-                ChromeDriverManager(driver_version="123.0.6312.58").install()
-            ),
-            options=options,
-        )
 
         paises = []
 
@@ -50,9 +43,17 @@ def sel():
             "suppress_connection_errors": False,
         }
 
-        # driver = webdriver.Chrome(options=options, seleniumwire_options=proxy_options)
-        # driver = webdriver.Chrome(options=options)
-        # driver = webdriver.Chrome(service=service, options=options)
+        
+        driver = webdriver.Chrome(
+            service=Service(
+                ChromeDriverManager(driver_version="123.0.6312.58").install()
+            ),
+            options=options,
+            seleniumwire_options=proxy_options,
+        )
+
+
+
         driver.get("https://www.youmainlyyou.com/")
         time.sleep(5)
         # arts = driver.find_elements(by="css selector", value="a:has(img):has(h3)")
