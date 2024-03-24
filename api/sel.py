@@ -13,7 +13,10 @@ def sel():
         options.add_argument("--disable-dev-shm-usage")
 
         driver = webdriver.Chrome(
-            service=Service(ChromeDriverManager().install()), options=options
+            service=Service(
+                ChromeDriverManager(driver_version="123.0.6312.58").install()
+            ),
+            options=options,
         )
 
         url = "https://redis.com/"
