@@ -39,8 +39,8 @@ def sel():
 
         proxy_options = {
             "proxy": {
-                "http": f"http://customer-migruedav:Migruedav1234@{pais}-pr.oxylabs.io:10000",
-                "https": f"https://customer-migruedav:Migruedav1234@{pais}-pr.oxylabs.io:10000",
+                "http": f"http://customer-migruedav-cc-ar:Migruedav1234@pr.oxylabs.io:7777",
+                "https": f"https://customer-migruedav-cc-ar:Migruedav1234@pr.oxylabs.io:7777",
                 # "no_proxy": "localhost,127.0.0.1",
             },
             # "verify_ssl": False,
