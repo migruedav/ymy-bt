@@ -40,16 +40,11 @@ def sel():
             "proxy": {
                 "http": f"http://customer-migruedav-cc-{pais}:Migruedav1234@pr.oxylabs.io:7777",
                 "https": f"https://customer-migruedav-cc-{pais}:Migruedav1234@pr.oxylabs.io:7777",
-                # "no_proxy": "localhost,127.0.0.1",
+                "no_proxy": "localhost,127.0.0.1",
             },
-            # "verify_ssl": False,
-            # "suppress_connection_errors": False,
+            "verify_ssl": False,
+            "suppress_connection_errors": False,
         }
-
-        options.add_argument("--ignore-certificate-errors")
-        options.add_argument("--ignore-ssl-errors")
-        options.add_argument("--disable-web-security")
-        options.add_argument("--allow-running-insecure-content")
 
         driver = webdriver.Chrome(
             service=Service(
