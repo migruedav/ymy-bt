@@ -42,7 +42,7 @@ def sel():
                 "https": f"https://customer-migruedav-cc-{pais}:Migruedav1234@pr.oxylabs.io:7777",
                 "no_proxy": "localhost,127.0.0.1",
             },
-            "verify_ssl": False,
+            "verify_ssl": True,
             "suppress_connection_errors": False,
         }
 
