@@ -52,11 +52,10 @@ def sel():
                 ChromeDriverManager(driver_version="123.0.6312.58").install()
             ),
             options=options,
-            seleniumwire_options=proxy_options,
+            # seleniumwire_options=proxy_options,
         )
 
         driver.get("https://www.youmainlyyou.com/")
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
         time.sleep(5)
         arts = driver.find_elements(by="css selector", value="a:has(img):has(h3)")
@@ -73,7 +72,6 @@ def sel():
         cat = driver.find_element(by="link text", value=random.choice(cats))
         print("cat", cat.text)
         cat.click()
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
         time.sleep(5)
 
