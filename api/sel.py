@@ -52,7 +52,7 @@ def sel():
                 ChromeDriverManager(driver_version="123.0.6312.58").install()
             ),
             options=options,
-            # seleniumwire_options=proxy_options,
+            seleniumwire_options=proxy_options,
         )
 
         driver.get("https://www.youmainlyyou.com/")
