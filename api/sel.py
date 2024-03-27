@@ -54,7 +54,7 @@ def sel():
         driver.get("https://www.youmainlyyou.com/")
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
-        time.sleep(5)
+        time.sleep(15)
         arts = driver.find_elements(by="css selector", value="a:has(img):has(h3)")
         cats = [
             "Wellbeing & Health",
@@ -71,12 +71,12 @@ def sel():
         cat.click()
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
-        time.sleep(5)
+        time.sleep(15)
 
         random_time = random.randint(1, 10)
         random_time = 3
         print("time1", random_time)
-        time.sleep(random_time)
+        time.sleep(15)
         arts = driver.find_elements(by="css selector", value="a:has(img):has(h3)")
         cats = [
             "Wellbeing & Health",
@@ -94,14 +94,14 @@ def sel():
         # random_time = random.randint(1, 10)
         random_time = 3
         print("time2", random_time)
-        time.sleep(random_time)
+        time.sleep(15)
         arts = driver.find_elements(by="css selector", value="a:has(img):has(h3)")
         art = random.choice(arts)
         art.click()
         # random_time = random.randint(1, 10)
         random_time = 3
         print("time3", random_time)
-        time.sleep(random_time)
+        time.sleep(15)
         driver.quit()
 
         return {"pais": pais, "message": "METDC"}
