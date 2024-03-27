@@ -52,6 +52,8 @@ def sel():
         )
 
         driver.get("https://www.youmainlyyou.com/")
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
         time.sleep(5)
         arts = driver.find_elements(by="css selector", value="a:has(img):has(h3)")
         cats = [
@@ -67,6 +69,8 @@ def sel():
         cat = driver.find_element(by="link text", value=random.choice(cats))
         print("cat", cat.text)
         cat.click()
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
         time.sleep(5)
 
         random_time = random.randint(1, 10)
