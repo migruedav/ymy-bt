@@ -43,8 +43,8 @@ def sel():
                 "https": f"https://customer-migruedav-cc-{pais}-sessid-0404864332-sesstime-10:Migruedav1234@pr.oxylabs.io:7777",
                 "no_proxy": "localhost,127.0.0.1",
             },
-            "verify_ssl": False,
-            "suppress_connection_errors": False,
+            # "verify_ssl": False,
+            # "suppress_connection_errors": False,
         }
 
         driver = webdriver.Chrome(
