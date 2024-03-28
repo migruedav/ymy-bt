@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from api.sel import sel
+from api.angola import angola
 
 app = FastAPI()
 
@@ -12,3 +13,8 @@ def read_root():
 @app.get("/sel")
 def read_sel():
     return {"title": sel()}
+
+
+@app.get("/angola")
+def read_angola():
+    return {"title": angola()}
