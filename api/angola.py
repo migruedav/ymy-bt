@@ -40,7 +40,7 @@ def angola():
     )
 
     driver.get("https://www.youmainlyyou.com")
-    time.sleep(15)
+    time.sleep(20)
     btn = driver.find_element(by="link text", value="Taste")
     btn.click()
     time.sleep(5)
