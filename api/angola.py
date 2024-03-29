@@ -9,7 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 def angola():
     username = "spm0uynyl7"
     password = "2ydXJhdsyHyCi_78s8"
-    proxy = f"http://{username}:{password}@ao.smartproxy.com:18000"
+    proxy = f"http://{username}:{password}@mx.smartproxy.com:20000"
 
     options = {
         "proxy": {
@@ -21,6 +21,7 @@ def angola():
 
     prefs = {
         "profile.managed_default_content_settings.images": 2,
+        "profile.default_content_setting_values.css": 2,
     }
 
     chrome_options = Options()
