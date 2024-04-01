@@ -7,14 +7,11 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 def angola():
-    username = "spm0uynyl7"
-    password = "2ydXJhdsyHyCi_78s8"
-    proxy = f"http://{username}:{password}@mx.smartproxy.com:20000"
 
     options = {
         "proxy": {
-            "http": proxy,
-            "https": proxy,
+            "http": "http://customer-migruedav-cc-mx:Migruedav1234@pr.oxylabs.io:7777",
+            "https": "https://customer-migruedav-cc-mx:Migruedav1234@pr.oxylabs.io:7777",
             "no_proxy": "localhost,127.0.0.1",
         }
     }
@@ -47,4 +44,4 @@ def angola():
     time.sleep(5)
     driver.quit()
 
-    return "Visita exitosa desde Angola"
+    return "Visita exitosa desde México"
