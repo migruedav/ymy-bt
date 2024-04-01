@@ -10,9 +10,7 @@ def angola():
 
     options = {
         "proxy": {
-            "http": "http://customer-migruedav-cc-mx:Migruedav1234@pr.oxylabs.io:7777",
-            "https": "https://customer-migruedav-cc-mx:Migruedav1234@pr.oxylabs.io:7777",
-            "no_proxy": "localhost,127.0.0.1",
+            "https": "https://customer-migruedav-cc-us:Migruedav1234@pr.oxylabs.io:7777",
         }
     }
 
@@ -44,4 +42,4 @@ def angola():
     time.sleep(5)
     driver.quit()
 
-    return "Visita exitosa desde México"
+    return "Visita exitosa desde United States"
